@@ -40,7 +40,8 @@ function getRandomFormation() {
     const positions = formations[randomFormation];
 
     const leagues = [
-        "Premier League", "La Liga", "Bundesliga", "Serie A", "Ligue 1", "Icons"
+        "Premier League", "La Liga", "Bundesliga", "Serie A", "Ligue 1", "MLS", "Icons", "Eredivisie",
+        "Liga Portugal", "Barclays WSL", "Liga F", "GPFBL", "NWSL", "ROSHN Saudi League", "Other"
     ];
 
     // Randomly assign a league to each position in the selected formation
