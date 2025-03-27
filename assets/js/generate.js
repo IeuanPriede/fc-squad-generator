@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const positions = formations[randomFormation];
 
         const leagues = [
-            "Premier League", "La Liga", "Bundesliga", "Serie A", "Ligue 1","Icons", "Other"
+            "Premier League", "La Liga", "Bundesliga", "Serie A", "Ligue 1","Icons", "ROW"
         ];
 
         // Randomly assign a league to each position in the selected formation
