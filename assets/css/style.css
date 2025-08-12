@@ -30,3 +30,75 @@ header h1 {
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
 }
+
+/* Formation output styles */
+#formation-output .formation-name {
+    font-family: 'Orbitron', sans-serif;   /* or your chosen header font */
+    font-weight: 700;
+    font-size: clamp(1.75rem, 3.2vw, 2.6rem);
+    color: #0d6efd;                        /* Bootstrap primary */
+    margin-bottom: .35rem;
+}
+
+#formation-output .section-label {
+    font-size: .8rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+    margin-bottom: .5rem;
+}
+
+#formation-output .assignments {
+    max-width: 32rem;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.35;
+}
+
+#formation-output .assignments li {
+    padding: .3rem 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+#formation-output .assignments li:last-child {
+    border-bottom: 0;
+}
+
+/* Pitch */
+#formation-output .pitch {
+  position: relative;
+  width: min(92vw, 520px);
+  aspect-ratio: 105 / 68;         /* football pitch ratio */
+  margin: 0.75rem auto 0;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,.12);
+  background:
+    repeating-linear-gradient(0deg, #0b5d0b 0 18px, #0a520a 18px 36px);
+}
+#formation-output .pitch::after {  /* halfway line */
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  height: 2px;
+  background: rgba(255,255,255,.25);
+}
+
+#formation-output .player {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#formation-output .player .dot {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: #0d6efd;        /* Bootstrap primary */
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.25);
+}
+#formation-output .player .league {
+  font-size: .75rem;
+  line-height: 1.1;
+  margin-top: .25rem;
+  opacity: .85;
+}
