@@ -33,8 +33,91 @@
         </div>
         <!-- Separate container for the formation output -->
         <div class="container bg-dark text-light p-3 rounded shadow-sm">
-            <p id="formation-output" class="mb-0" aria-live="polite"></p>
+            <div class="row g-3 align-items-start">
+                <!-- Left: Filters -->
+                <div class="col-12 col-lg-5">
+                    <h2 class="h6 mb-3">Filters</h2>
+
+                    <!-- Exclude leagues -->
+                    <div class="mb-3">
+                        <label class="form-label mb-1">Exclude leagues</label>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input league-filter" type="checkbox" value="Premier League" id="exPL">
+                            <label class="form-check-label" for="exPL">Premier League</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input league-filter" type="checkbox" value="La Liga" id="exLL">
+                            <label class="form-check-label" for="exLL">La Liga</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input league-filter" type="checkbox" value="Bundesliga" id="exBL">
+                            <label class="form-check-label" for="exBL">Bundesliga</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input league-filter" type="checkbox" value="Serie A" id="exSA">
+                            <label class="form-check-label" for="exSA">Serie A</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input league-filter" type="checkbox" value="Ligue 1" id="exL1">
+                            <label class="form-check-label" for="exL1">Ligue 1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input league-filter" type="checkbox" value="Icons" id="exIC">
+                            <label class="form-check-label" for="exIC">Icons</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input league-filter" type="checkbox" value="ROW" id="exROW">
+                            <label class="form-check-label" for="exROW">ROW</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exclude formations -->
+                <div>
+                    <label for="exclude-formations" class="form-label mb-1">Exclude formations</label>
+                    <select id="exclude-formations" class="form-select" multiple size="8">
+                        <option>3-1-4-2</option>
+                        <option>3-4-1-2</option>
+                        <option>3-4-2-1</option>
+                        <option>3-4-3</option>
+                        <option>3-5-2</option>
+                        <option>4-1-2-1-2</option>
+                        <option>4-1-2-1-2(2)</option>
+                        <option>4-1-3-2</option>
+                        <option>4-1-4-1</option>
+                        <option>4-2-1-3</option>
+                        <option>4-2-2-2</option>
+                        <option>4-2-3-1</option>
+                        <option>4-2-3-1(2)</option>
+                        <option>4-2-4</option>
+                        <option>4-3-1-2</option>
+                        <option>4-3-2-1</option>
+                        <option>4-3-3</option>
+                        <option>4-3-3(2)</option>
+                        <option>4-3-3(3)</option>
+                        <option>4-3-3(4)</option>
+                        <option>4-4-1-1(2)</option>
+                        <option>4-4-2</option>
+                        <option>4-4-2(2)</option>
+                        <option>4-5-1</option>
+                        <option>4-5-1(2)</option>
+                        <option>5-2-1-2</option>
+                        <option>5-2-3</option>
+                        <option>5-3-2</option>
+                        <option>5-4-1</option>
+                    </select>
+                    <p>Hold Ctrl/Cmd to select multiple.</p>
+                </div>
+            </div>
+
+            <!-- Right: Formation output / pitch -->
+            <div class="col-12 col-lg-7">
+                <div id="formation-output" aria-live="polite"></div>
+            </div>
         </div>
+    </div>
+
     </main>
 
     <footer>
