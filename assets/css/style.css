@@ -84,9 +84,15 @@ header h1 {
 
 #formation-output .player {
   position: absolute;
+  left: 0; top: 0;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* centers dot + text */
   text-align: center;
+  gap: .25rem;            /* space between dot and label */
 }
+
 #formation-output .player .dot {
   width: 42px; height: 42px;
   border-radius: 50%;
@@ -96,9 +102,8 @@ header h1 {
   font-weight: 700;
   box-shadow: 0 0 0 2px rgba(0,0,0,.25);
 }
+
 #formation-output .player .league {
-  font-size: .75rem;
-  line-height: 1.1;
-  margin-top: .25rem;
-  opacity: .85;
+  font-size: clamp(.6rem, 1.6vw, .8rem);
+  white-space: nowrap;    /* prevents wrap that can look off-center */
 }

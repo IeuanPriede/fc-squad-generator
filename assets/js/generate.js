@@ -56,40 +56,46 @@ function getRandomFormation() {
     const formationSlots = {
     "4-3-3": [
         {pos:"GK", x:50, y:92},
-        {pos:"RB", x:82, y:78}, {pos:"CB", x:62, y:80}, {pos:"CB", x:38, y:80}, {pos:"LB", x:18, y:78},
-        {pos:"CM", x:70, y:58}, {pos:"CM", x:50, y:60}, {pos:"CM", x:30, y:58},
-        {pos:"RW", x:78, y:32}, {pos:"ST", x:50, y:20}, {pos:"LW", x:22, y:32}
+        {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
+        {pos:"CM", x:70, y:48}, {pos:"CM", x:50, y:48}, {pos:"CM", x:30, y:48},
+        {pos:"RW", x:78, y:23}, {pos:"ST", x:50, y:12}, {pos:"LW", x:22, y:23}
     ],
     "4-4-2": [
         {pos:"GK", x:50, y:92},
-        {pos:"RB", x:82, y:78}, {pos:"CB", x:62, y:80}, {pos:"CB", x:38, y:80}, {pos:"LB", x:18, y:78},
-        {pos:"RM", x:78, y:56}, {pos:"CM", x:58, y:58}, {pos:"CM", x:42, y:58}, {pos:"LM", x:22, y:56},
-        {pos:"ST", x:58, y:28}, {pos:"ST", x:42, y:28}
+        {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
+        {pos:"RM", x:78, y:48}, {pos:"CM", x:58, y:48}, {pos:"CM", x:42, y:48}, {pos:"LM", x:22, y:48},
+        {pos:"ST", x:58, y:12}, {pos:"ST", x:42, y:12}
     ],
     "3-5-2": [
         {pos:"GK", x:50, y:92},
-        {pos:"CB", x:60, y:80}, {pos:"CB", x:50, y:78}, {pos:"CB", x:40, y:80},
-        {pos:"RM", x:80, y:58}, {pos:"CDM", x:60, y:60}, {pos:"CM", x:50, y:56}, {pos:"CDM", x:40, y:60}, {pos:"LM", x:20, y:58},
-        {pos:"ST", x:56, y:28}, {pos:"ST", x:44, y:28}
+        {pos:"CB", x:65, y:72}, {pos:"CB", x:50, y:72}, {pos:"CB", x:35, y:72},
+        {pos:"RM", x:80, y:58}, {pos:"CDM", x:60, y:60}, {pos:"CM", x:50, y:53}, {pos:"CDM", x:40, y:60}, {pos:"LM", x:20, y:58},
+        {pos:"ST", x:56, y:12}, {pos:"ST", x:44, y:12}
     ],
     "5-3-2": [
         {pos:"GK", x:50, y:92},
-        {pos:"RB", x:82, y:78}, {pos:"CB", x:66, y:80}, {pos:"CB", x:50, y:82}, {pos:"CB", x:34, y:80}, {pos:"LB", x:18, y:78},
-        {pos:"CM", x:62, y:58}, {pos:"CM", x:50, y:56}, {pos:"CM", x:38, y:58},
+        {pos:"RB", x:82, y:70}, {pos:"CB", x:60, y:72}, {pos:"CB", x:50, y:72}, {pos:"CB", x:40, y:72}, {pos:"LB", x:18, y:70},
+        {pos:"CM", x:62, y:53}, {pos:"CM", x:50, y:53}, {pos:"CM", x:38, y:53},
         {pos:"ST", x:56, y:28}, {pos:"ST", x:44, y:28}
     ],
     "4-2-3-1": [
         {pos:"GK", x:50, y:92},
-        {pos:"RB", x:82, y:78}, {pos:"CB", x:62, y:80}, {pos:"CB", x:38, y:80}, {pos:"LB", x:18, y:78},
+        {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
         {pos:"CDM", x:58, y:64}, {pos:"CDM", x:42, y:64},
         {pos:"CAM", x:70, y:50}, {pos:"CAM", x:50, y:48}, {pos:"CAM", x:30, y:50},
         {pos:"ST", x:50, y:24}
     ],
     "3-4-3": [
         {pos:"GK", x:50, y:92},
-        {pos:"CB", x:62, y:80}, {pos:"CB", x:50, y:80}, {pos:"CB", x:38, y:80},
+        {pos:"CB", x:60, y:72}, {pos:"CB", x:50, y:72}, {pos:"CB", x:40, y:72},
         {pos:"RM", x:78, y:60}, {pos:"CM", x:58, y:58}, {pos:"CM", x:42, y:58}, {pos:"LM", x:22, y:60},
         {pos:"RW", x:72, y:32}, {pos:"ST", x:50, y:22}, {pos:"LW", x:28, y:32}
+    ],
+    "5-2-1-2": [
+        {pos:"GK", x:50, y:92},
+        {pos:"RB", x:82, y:70}, {pos:"CB", x:60, y:72}, {pos:"CB", x:50, y:72}, {pos:"CB", x:40, y:72}, {pos:"LB", x:18, y:70},
+        {pos:"CM", x:58, y:58}, {pos:"CM", x:42, y:58}, {pos:"CAM", x:50, y:55},
+        {pos:"ST", x:56, y:28}, {pos:"ST", x:44, y:28}
     ],
     // map common variants to base
     "4-3-3(2)": "4-3-3",
