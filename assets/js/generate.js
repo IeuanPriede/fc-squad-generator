@@ -22,7 +22,7 @@ function getRandomFormation(options = {}) {
         "4-3-3(2)": ["GK", "RB", "CB", "CB", "LB", "CDM", "CM", "CM", "RW", "ST", "LW"],
         "4-3-3(3)": ["GK", "RB", "CB", "CB", "LB", "CDM", "CDM", "CM", "RW", "ST", "LW"],
         "4-3-3(4)": ["GK", "RB", "CB", "CB", "LB", "CM", "CM", "CAM", "RW", "ST", "LW"],
-        "4-4-1-1(2)": ["GK", "RB", "CB", "CB", "LB", "RM", "CM", "CM", "LM", "CAM", "ST"],
+        "4-4-1-1": ["GK", "RB", "CB", "CB", "LB", "RM", "CM", "CM", "LM", "CAM", "ST"],
         "4-4-2": ["GK", "RB", "CB", "CB", "LB", "RM", "CM", "CM", "LM", "ST", "ST"],
         "4-4-2(2)": ["GK", "RB", "CB", "CB", "LB", "RM", "CDM", "CDM", "LM", "ST", "ST"],
         "4-5-1": ["GK", "RB", "CB", "CB", "LB", "RM", "CM", "LM", "CAM", "CAM", "ST"],
@@ -141,16 +141,51 @@ function getRandomFormation(options = {}) {
         {pos:"CAM", x:70, y:32}, {pos:"CAM", x:30, y:32},
         {pos:"ST", x:62, y:12}, {pos:"ST", x:38, y:12}
     ],
+     "4-2-3-1": [
+        {pos:"GK", x:50, y:92},
+        {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
+        {pos:"CDM", x:72, y:52}, {pos:"CDM", x:28, y:52},
+        {pos:"CAM", x:70, y:30}, {pos:"CAM", x:50, y:35}, {pos:"CAM", x:30, y:30},
+        {pos:"ST", x:50, y:12}
+    ],
+    "4-2-3-1(2)": [
+        {pos:"GK", x:50, y:92},
+        {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
+        {pos:"CDM", x:66, y:52}, {pos:"CDM", x:34, y:52},
+        {pos:"RM", x:82, y:44}, {pos:"LM", x:18, y:44}, {pos:"CAM", x:50, y:35},
+        {pos:"ST", x:50, y:12}
+    ],
+    "4-2-4": [
+        {pos:"GK", x:50, y:92},
+        {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
+        {pos:"CM", x:62, y:46}, {pos:"CM", x:38, y:46},
+        {pos:"RW", x:78, y:23}, {pos:"LW", x:22, y:23},
+        {pos:"ST", x:62, y:12}, {pos:"ST", x:38, y:12}
+    ],
+    "4-3-1-2": [
+        {pos:"GK", x:50, y:92},
+        {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
+        {pos:"CM", x:70, y:46}, {pos:"CM", x:50, y:52}, {pos:"CM", x:30, y:46},
+        {pos:"CAM", x:50, y:32},
+        {pos:"ST", x:62, y:12}, {pos:"ST", x:38, y:12}
+    ],
+    "4-3-2-1": [
+        {pos:"GK", x:50, y:92},
+        {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
+        {pos:"CM", x:70, y:48}, {pos:"CM", x:50, y:52}, {pos:"CM", x:30, y:48},
+        {pos:"CAM", x:70, y:25}, {pos:"CAM", x:30, y:25},
+        {pos:"ST", x:50, y:12}
+    ],
     "4-3-3": [
         {pos:"GK", x:50, y:92},
         {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
-        {pos:"CM", x:70, y:46}, {pos:"CM", x:50, y:46}, {pos:"CM", x:30, y:46},
+        {pos:"CM", x:70, y:46}, {pos:"CM", x:50, y:50}, {pos:"CM", x:30, y:46},
         {pos:"RW", x:78, y:23}, {pos:"ST", x:50, y:12}, {pos:"LW", x:22, y:23}
     ],
     "4-3-3(2)": [
         {pos:"GK", x:50, y:92},
         {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
-        {pos:"CDM", x:50, y:52}, {pos:"CM", x:70, y:46}, {pos:"CM", x:30, y:46},
+        {pos:"CDM", x:50, y:54}, {pos:"CM", x:70, y:46}, {pos:"CM", x:30, y:46},
         {pos:"RW", x:78, y:23}, {pos:"ST", x:50, y:12}, {pos:"LW", x:22, y:23}
     ],
     "4-3-3(3)": [
@@ -165,32 +200,64 @@ function getRandomFormation(options = {}) {
         {pos:"CM", x:70, y:46}, {pos:"CM", x:30, y:46}, {pos:"CAM", x:50, y:35},
         {pos:"RW", x:78, y:23}, {pos:"ST", x:50, y:12}, {pos:"LW", x:22, y:23}
     ],
+    "4-4-1-1": [
+        {pos:"GK", x:50, y:92},
+        {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
+        {pos:"RM", x:82, y:44}, {pos:"CM", x:62, y:50}, {pos:"CM", x:38, y:50}, {pos:"LM", x:18, y:44},
+        {pos:"CAM", x:50, y:32},
+        {pos:"ST", x:50, y:12}
+    ],
     "4-4-2": [
         {pos:"GK", x:50, y:92},
         {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
         {pos:"RM", x:82, y:44}, {pos:"CM", x:62, y:46}, {pos:"CM", x:38, y:46}, {pos:"LM", x:18, y:44},
         {pos:"ST", x:62, y:12}, {pos:"ST", x:38, y:12}
     ],
-    "4-2-3-1": [
+    "4-4-2(2)": [
         {pos:"GK", x:50, y:92},
         {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
-        {pos:"CDM", x:72, y:52}, {pos:"CDM", x:28, y:52},
-        {pos:"CAM", x:70, y:30}, {pos:"CAM", x:50, y:35}, {pos:"CAM", x:30, y:30},
+        {pos:"RM", x:82, y:44}, {pos:"CDM", x:62, y:52}, {pos:"CDM", x:38, y:52}, {pos:"LM", x:18, y:44},
+        {pos:"ST", x:62, y:12}, {pos:"ST", x:38, y:12}
+    ],
+    "4-5-1": [
+        {pos:"GK", x:50, y:92},
+        {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
+        {pos:"RM", x:82, y:44}, {pos:"CM", x:50, y:46}, {pos:"LM", x:18, y:44},
+        {pos:"CAM", x:70, y:25}, {pos:"CAM", x:30, y:25},
+        {pos:"ST", x:50, y:12}
+    ],
+    "4-5-1(2)": [
+        {pos:"GK", x:50, y:92},
+        {pos:"RB", x:82, y:70}, {pos:"CB", x:62, y:72}, {pos:"CB", x:38, y:72}, {pos:"LB", x:18, y:70},
+        {pos:"RM", x:82, y:38}, {pos:"CM", x:68, y:46}, {pos:"CM", x:50, y:50}, {pos:"CM", x:32, y:46}, {pos:"LM", x:18, y:38},
         {pos:"ST", x:50, y:12}
     ],
     // 5-back formations
-    "5-3-2": [
-        {pos:"GK", x:50, y:92},
-        {pos:"RB", x:82, y:70}, {pos:"CB", x:60, y:72}, {pos:"CB", x:50, y:72}, {pos:"CB", x:40, y:72}, {pos:"LB", x:18, y:70},
-        {pos:"CM", x:62, y:53}, {pos:"CM", x:50, y:53}, {pos:"CM", x:38, y:53},
-        {pos:"ST", x:56, y:28}, {pos:"ST", x:44, y:28}
-    ],
     "5-2-1-2": [
         {pos:"GK", x:50, y:92},
-        {pos:"RB", x:82, y:70}, {pos:"CB", x:60, y:72}, {pos:"CB", x:50, y:72}, {pos:"CB", x:40, y:72}, {pos:"LB", x:18, y:70},
-        {pos:"CM", x:58, y:58}, {pos:"CM", x:42, y:58}, {pos:"CAM", x:50, y:55},
-        {pos:"ST", x:56, y:28}, {pos:"ST", x:44, y:28}
+        {pos:"RB", x:86, y:68}, {pos:"CB", x:68, y:71}, {pos:"CB", x:50, y:74}, {pos:"CB", x:32, y:71}, {pos:"LB", x:14, y:68},
+        {pos:"CM", x:62, y:48}, {pos:"CM", x:38, y:48},
+        {pos:"CAM", x:50, y:31},
+        {pos:"ST", x:62, y:12}, {pos:"ST", x:38, y:12}
     ],
+    "5-2-3": [
+        {pos:"GK", x:50, y:92},
+        {pos:"RB", x:86, y:68}, {pos:"CB", x:68, y:71}, {pos:"CB", x:50, y:74}, {pos:"CB", x:32, y:71}, {pos:"LB", x:14, y:68},
+        {pos:"CM", x:62, y:46}, {pos:"CM", x:38, y:46},
+        {pos:"RW", x:78, y:23}, {pos:"ST", x:50, y:12}, {pos:"LW", x:22, y:23}
+    ],
+    "5-3-2": [
+        {pos:"GK", x:50, y:92},
+        {pos:"RB", x:86, y:68}, {pos:"CB", x:68, y:71}, {pos:"CB", x:50, y:74}, {pos:"CB", x:32, y:71}, {pos:"LB", x:14, y:68},
+        {pos:"CDM", x:50, y:54}, {pos:"CM", x:70, y:46}, {pos:"CM", x:30, y:46},
+        {pos:"ST", x:62, y:12}, {pos:"ST", x:38, y:12}
+    ],
+    "5-4-1": [
+        {pos:"GK", x:50, y:92},
+        {pos:"RB", x:86, y:68}, {pos:"CB", x:68, y:71}, {pos:"CB", x:50, y:74}, {pos:"CB", x:32, y:71}, {pos:"LB", x:14, y:68},
+        {pos:"RM", x:82, y:44}, {pos:"CM", x:62, y:46}, {pos:"CM", x:38, y:46}, {pos:"LM", x:18, y:44},
+        {pos:"ST", x:50, y:12}
+    ]
     };
 
     // Accept close equivalents (e.g., RW ↔ RM, LW ↔ LM)
