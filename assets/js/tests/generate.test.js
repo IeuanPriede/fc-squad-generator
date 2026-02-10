@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const { getRandomFormation } = require('../generate');
+const { getRandomFormation } = require('../generate.js');
 
 describe("Random Formation Generator", () => {
     it("should return a valid formation from the list", () => {
