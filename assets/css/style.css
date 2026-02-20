@@ -31,6 +31,15 @@ header h1 {
     font-weight: 700;
 }
 
+footer {
+    border-top: 2px solid #0d6efd;
+}
+
+footer p {
+    padding: 1rem;
+}
+
+
 /* Formation output styles */
 #formation-output .formation-name {
     font-family: 'Orbitron', sans-serif;   /* or your chosen header font */
