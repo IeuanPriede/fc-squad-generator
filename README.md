@@ -6,4 +6,4 @@ The idea stems from the video game "EA SPORTS FC". A football/soccer simulator t
 
 At it's current iteration, I have proritised the functionality of the generator over the layout and stylling of the page.
 
-Live deployment link: https://ieuanpriede.github.io/fc-team-generator/
+Live deployment link: https://ieuanpriede.github.io/fc-squad-generator/
