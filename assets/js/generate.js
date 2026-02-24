@@ -33,7 +33,9 @@ function getRandomFormation(options = {}) {
         "5-4-1": ["GK", "RB", "CB", "CB", "CB", "LB", "RM", "CM", "CM", "LM", "ST"]
     };
 
-    const allLeagues = ["Premier League","WSL","La Liga","Liga F","Bundesliga","GPFBL","Serie A","Ligue 1","D1 Arkema","Icons","ROW"];
+    const allLeagues = ["Premier League","WSL","La Liga","Liga F","Bundesliga","GPFBL","Serie A","Ligue 1","D1 Arkema","Icons","ROW",
+        "Argentina", "Brazil", "England", "France", "Germany", "Italy", "Netherlands", "Portugal", "Spain", "Wildcard"
+    ];
 
     // Filter formations
     const eligibleFormations = Object.keys(formations).filter(f => !excludeFormations.includes(f));

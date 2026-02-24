@@ -7,10 +7,10 @@ body {
 main {
     display: flex;
     flex-direction: column; /* Stack main's children vertically */
-    height: 100vh; /* Full height of the viewport */
     text-align: center; /* Ensure text inside is centered */
     gap: 1rem; /* Space between sections */
     padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 
