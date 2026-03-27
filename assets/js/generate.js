@@ -59,7 +59,14 @@ function getRandomFormation(options = {}) {
         return { position, league: allowedLeagues[rnd] };
     });
 
-    return { formation: randomFormation, assignedLeagues };
+    return { formation: randomFormation, assignedLeagues, allowedLeagues };
+}
+
+function generateBench(allowedLeagues, count = 7) {
+    return Array.from({ length: count }, () => {
+        const randomLeague = allowedLeagues[Math.floor(Math.random() * allowedLeagues.length)];
+        return randomLeague;
+    });
 }
 
     // Formation slot coordinates (percent from left/top). Add more as needed.
@@ -314,7 +321,9 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
         }
 
-        const { formation, assignedLeagues } = result;
+        const { formation, assignedLeagues, allowedLeagues } = result;
+
+        const bench = generateBench(allowedLeagues, 7);
 
         const pitchHTML = renderFormationPitch(formation, assignedLeagues);
         const listHTML = `
@@ -325,9 +334,18 @@ document.addEventListener('DOMContentLoaded', function () {
             `).join("")}
         </ul>`;
 
+        const benchHTML = `
+        <div class="section-label mt-3">Substitutes</div>
+        <ul class="assignments list-unstyled">
+            ${bench.map(league => `
+                <li><span class="badge bg-warning text-dark me-2">SUB</span>${league}</li>
+            `).join("")}
+        </ul>`;
+
         out.innerHTML = `
         <div class="formation-name">${formation}</div>
-        ${pitchHTML || listHTML}
+        ${pitchHTML}
+        ${benchHTML}
         `;
     });
 });
