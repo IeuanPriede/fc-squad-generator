@@ -290,13 +290,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const bench = generateBench(allowedLeagues, 7);
 
         const pitchHTML = renderFormationPitch(formation, assignedLeagues);
-        const listHTML = `
-        <div class="section-label">Assigned Leagues</div>
-        <ul class="assignments list-unstyled">
-            ${assignedLeagues.map(({ position, league }) => `
-            <li><span class="badge bg-secondary me-2">${position}</span>${league}</li>
-            `).join("")}
-        </ul>`;
 
         const benchHTML = `
         <div class="section-label mt-3">Substitutes</div>
