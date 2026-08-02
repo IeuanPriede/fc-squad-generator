@@ -31,158 +31,202 @@
 
     <main>
         <div class="container">
+
             <section class="hero">
                 <h2>Generate a Random Ultimate Team Challenge</h2>
                 <p>
                 Create a random squad for your next EA Sports FC Ultimate Team match.
                 </p>
                 <p>27 leagues, nations and special categories included.</p>
-                <button type="button" class="btn btn-primary btn-lg">⚽ Generate New Challenge</button>
             </section>
-            <!-- Separate container for the formation output -->
-            <section class="generator bg-dark text-light p-4 rounded-4 shadow">
-                <div class="row">
-                    <!-- Left: Filters -->
-                    <div class="col-lg-5">
-                        <h3 class="filter-title">
-                            <span>⚙️</span> Filters
-                        </h3>
-                        <!-- Exclude leagues -->
-                        <div class="mb-3">
-                            <h5 class="filter-section-title">Men's Leagues</h5>
-                            <div class="filter-grid">
-                                <div>
-                                    <input class="league-filter" type="checkbox" value="Premier League" id="exPL">
-                                    <label for="exPL">Premier League</label>
-                                </div>
-                                <div>
-                                    <input class="league-filter" type="checkbox" value="La Liga" id="exLL">
-                                    <label for="exLL">La Liga</label>
-                                </div>
-                                <div>
-                                    <input class="league-filter" type="checkbox" value="Bundesliga" id="exBL">
-                                    <label for="exBL">Bundesliga</label>
-                                </div>
-                                <div>
-                                    <input class="league-filter" type="checkbox" value="Serie A" id="exSA">
-                                    <label for="exSA">Serie A</label>
-                                </div>
-                                <div>
-                                    <input class="league-filter" type="checkbox" value="Ligue 1" id="exL1">
-                                    <label for="exL1">Ligue 1</label>
-                                </div>
-                                <div>
-                                    <input class="league-filter" type="checkbox" value="Super Lig" id="exDA">
-                                    <label for="exSL">Super Lig</label>
-                                </div>
-                                <div>
-                                    <input class="league-filter" type="checkbox" value="MLS" id="exDA">
-                                    <label for="exMLS">MLS</label>
-                                </div> 
-                                <div>
-                                    <input class="league-filter" type="checkbox" value="Eredivisie" id="exDA">
-                                    <label for="exERE">Eredivisie</label>
-                                </div>
-                                <div>
-                                    <input class="league-filter" type="checkbox" value="EFL" id="exDA">
-                                    <label for="exEFL">EFL</label>
-                                </div>  
-                                <div>
-                                    <input class="league-filter" type="checkbox" value="Saudi Pro League" id="exDA">
-                                    <label for="exSPL">Saudi Pro League</label>
-                                </div>
-                                <div>
-                                    <input class="league-filter" type="checkbox" value="Liga Portugal" id="exDA">
-                                    <label for="exLP">Liga Portugal</label>
-                                </div>  
-                            </div>
-                            <div class="filter-group">
-                                <h5 class="filter-section-title">Women's Leagues</h5>
-                                <div class="filter-grid">
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="WSL" id="exWSL">
-                                        <label for="exWSL">WSL</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="Liga F" id="exLF">
-                                        <label for="exLF">Liga F</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="GPFBL" id="exGPFBL">
-                                        <label for="exGPFBL">GPFBL</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="D1 Arkema" id="exDA">
-                                        <label for="exDA">D1 Arkema</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="NWSL" id="exDA">
-                                        <label for="exNWSL">NSWL</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="filter-group">
-                                <h5 class="filter-section-title">
-                                    Nations & Specials
-                                </h5>
-                                <div class="filter-grid">
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="Icons" id="exIC">
-                                        <label for="exIC">Icons</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="ROW" id="exROW">
-                                        <label for="exROW">ROW</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="Argentina" id="exARG">
-                                        <label for="exARG">Argentina</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="Brazil" id="exBRA">
-                                        <label for="exBRA">Brazil</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="England" id="exENG">
-                                        <label for="exENG">England</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="France" id="exFRA">
-                                        <label for="exFRA">France</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="Germany" id="exGER">
-                                        <label for="exGER">Germany</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="Italy" id="exITA">
-                                        <label for="exITA">Italy</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="Netherlands" id="exNED">
-                                        <label for="exNED">Netherlands</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="Portugal" id="exPOR">
-                                        <label for="exPOR">Portugal</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="Spain" id="exESP">
-                                        <label for="exESP">Spain</label>
-                                    </div>
-                                    <div>
-                                        <input class="league-filter" type="checkbox" value="Wildcard" id="exWC">
-                                        <label for="exWC">Wildcard</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Exclude formations -->
-                    <div>
-                        <label for="exclude-formations" class="fw-semibold mb-3 d-block">Exclude formations</label>
-                        <select id="exclude-formations" class="form-select" multiple size="8">
+            <!-- Separate container for the formation output -->
+            <section class="filters-panel bg-dark text-light p-4 rounded-4 shadow">
+                <h3 class="filter-title">
+                    <span>⚙️</span> Squad Filters
+                </h3>
+
+                <p>Tick the checkbox to exclude a league, nation or special filter.</p>
+
+                <div class="filters-layout">
+
+                    <!-- Men's -->
+                    <div class="filter-card">
+                        <h5 class="filter-section-title">Men's Leagues</h5>
+
+                        <div class="filter-list two-columns">
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Premier League" id="exPL">
+                                <label for="exPL">Premier League</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="La Liga" id="exLL">
+                                <label for="exLL">La Liga</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Bundesliga" id="exBL">
+                                <label for="exBL">Bundesliga</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Serie A" id="exSA">
+                                <label for="exSA">Serie A</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Ligue 1" id="exL1">
+                                <label for="exL1">Ligue 1</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Super Lig" id="exSL">
+                                <label for="exSL">Super Lig</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="MLS" id="exMLS">
+                                <label for="exMLS">MLS</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Eredivisie" id="exERE">
+                                <label for="exERE">Eredivisie</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="EFL" id="exEFL">
+                                <label for="exEFL">EFL</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Saudi Pro League" id="exSPL">
+                                <label for="exSPL">Saudi Pro League</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Liga Portugal" id="exLP">
+                                <label for="exLP">Liga Portugal</label>
+                            </div>
+
+                        </div>
+
+                        <!-- Women's -->
+                        <h5 class="filter-section-title">Women's Leagues</h5>
+
+                        <div class="filter-list two-columns">
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="WSL" id="exWSL">
+                                <label for="exWSL">WSL</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Liga F" id="exLF">
+                                <label for="exLF">Liga F</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="GPFBL" id="exGPFBL">
+                                <label for="exGPFBL">GPFBL</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="D1 Arkema" id="exDA">
+                                <label for="exDA">D1 Arkema</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="NWSL" id="exNWSL">
+                                <label for="exNWSL">NWSL</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                    <!-- Nations -->
+                    <div class="filter-card"> 
+                        <h5 class="filter-section-title">Nations & Specials</h5>
+
+                        <div class="filter-list two-columns">
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Icons" id="exIC">
+                                <label for="exIC">Icons</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="ROW" id="exROW">
+                                <label for="exROW">ROW</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Argentina" id="exARG">
+                                <label for="exARG">Argentina</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Brazil" id="exBRA">
+                                <label for="exBRA">Brazil</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="England" id="exENG">
+                                <label for="exENG">England</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="France" id="exFRA">
+                                <label for="exFRA">France</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Germany" id="exGER">
+                                <label for="exGER">Germany</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Italy" id="exITA">
+                                <label for="exITA">Italy</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Netherlands" id="exNED">
+                                <label for="exNED">Netherlands</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Portugal" id="exPOR">
+                                <label for="exPOR">Portugal</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Spain" id="exESP">
+                                <label for="exESP">Spain</label>
+                            </div>
+
+                            <div>
+                                <input class="league-filter" type="checkbox" value="Wildcard" id="exWC">
+                                <label for="exWC">Wildcard</label>
+                            </div>
+
+                        </div>
+
+                    <!-- Formations -->
+
+                        <h5 class="filter-section-title">
+                            Exclude Formations
+                        </h5>
+
+                        <select
+                            id="exclude-formations"
+                            class="form-select"
+                            multiple
+                            size="6">
+
                             <option>3-1-4-2</option>
                             <option>3-4-1-2</option>
                             <option>3-4-2-1</option>
@@ -212,14 +256,34 @@
                             <option>5-2-3</option>
                             <option>5-3-2</option>
                             <option>5-4-1</option>
-                        </select>
-                        <p>Hold Ctrl/Cmd to select multiple.</p>
-                    </div>
-                </div>
 
-                <!-- Right: Formation output / pitch -->
-                <div class="col-12 col-lg-7">
-                    <div id="formation-output" aria-live="polite"></div>
+                        </select>
+
+                        <small class="text-secondary">
+                            Hold Ctrl/Cmd to select multiple.
+                        </small>
+                
+                    </div>
+
+                </div>
+                <button type="button" class="btn btn-primary btn-lg">⚽ Generate New Challenge</button>
+            </section>    
+
+            <section class="squad-panel bg-dark text-light p-4 rounded-4 shadow mt-4">
+                <h2 id="formation-title" class="formation-name">
+                    Ready for a Challenge?
+                </h2>
+
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div id="formation-output" aria-live="polite">
+                            <!-- Empty pitch placeholder -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div id="bench-output">
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

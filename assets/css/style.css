@@ -34,6 +34,7 @@ header h1 {
 .hero {
     max-width: 700px;
     margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .hero p:first-of-type {
@@ -72,16 +73,6 @@ header h1 {
     font-weight: 600;
 }
 
-.filter-group {
-    padding: 1.5rem 0;
-    border-top: 1px solid rgba(255,255,255,.08);
-}
-
-.filter-group:first-of-type {
-    border-top: none;
-    padding-top: 0;
-}
-
 .filter-section-title {
     font-size: 1rem;
     font-weight: 600;
@@ -89,15 +80,48 @@ header h1 {
     color: rgba(255,255,255,.9);
 }
 
-.filter-grid {
+.filters-layout {
     display: grid;
-    grid-template-columns: repeat(2, minmax(180px, 1fr));
-    gap: .75rem 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding-bottom: 20px;
 }
 
-.filter-grid div {
+.filter-card {
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.filter-list {
+    display: flex;
+    flex-direction: column;
+    gap: .65rem;
+}
+
+.filter-list.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
+    row-gap: .6rem;
+    padding-bottom: 10px;
+}
+
+.filter-list div {
     display: flex;
     align-items: center;
+}
+
+.filter-list label {
+    margin-left: .5rem;
+    margin-bottom: 0;
+}
+
+.filter-section-title {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
 }
 
 .league-filter {
@@ -110,15 +134,21 @@ header h1 {
     cursor: pointer;
 }
 
-footer {
-    border-top: 2px solid #0d6efd;
-    background-color: #363131;
+.filters-panel,
+.squad-panel {
+    background-color: #25282c;
 }
 
-footer p {
-    padding: 1rem;
+.squad-panel {
+    margin-top: 2rem;
+    min-height: 650px;
 }
 
+@media (max-width: 768px) {
+    .filters-layout {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* Formation output styles */
 #formation-output .formation-name {
@@ -195,4 +225,13 @@ footer p {
 #formation-output .player .league {
   font-size: clamp(.6rem, 1.6vw, .8rem);
   white-space: nowrap;    /* prevents wrap that can look off-center */
+}
+
+footer {
+    border-top: 2px solid #0d6efd;
+    background-color: #363131;
+}
+
+footer p {
+    padding: 1rem;
 }
