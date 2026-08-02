@@ -1,58 +1,21 @@
 function getRandomFormation(options = {}) {
     const { excludeFormations = [], excludeLeagues = [] } = options;
 
-    const formations = {
-        "3-1-4-2": ["GK", "CB", "CB", "CB", "CDM", "RM", "CM", "CM", "LM", "ST", "ST"],
-        "3-4-1-2": ["GK", "CB", "CB", "CB", "RM", "CM", "CM", "LM", "CAM", "ST", "ST"],
-        "3-4-2-1": ["GK", "CB", "CB", "CB", "RM", "CM", "CM", "LM", "CAM", "CAM", "ST"],
-        "3-4-3": ["GK", "CB", "CB", "CB", "RM", "CM", "CM", "LM", "RW", "ST", "LW"],
-        "3-5-2": ["GK", "CB", "CB", "CB", "RM", "CDM", "CDM", "CAM", "LM", "ST", "ST"],
-        "4-1-2-1-2": ["GK", "RB", "CB", "CB", "LB", "CDM", "RM", "LM", "CAM", "ST", "ST"],
-        "4-1-2-1-2(2)": ["GK", "RB", "CB", "CB", "LB", "CDM", "CM", "CM", "CAM", "ST", "ST"],
-        "4-1-3-2": ["GK", "RB", "CB", "CB", "LB", "CDM", "RM", "CM", "LM", "ST", "ST"],
-        "4-1-4-1": ["GK", "RB", "CB", "CB", "LB", "CDM", "RM", "CM", "CM", "LM", "ST"],
-        "4-2-1-3": ["GK", "RB", "CB", "CB", "LB", "CDM", "CDM", "CAM", "RW", "ST", "LW"],
-        "4-2-2-2": ["GK", "RB", "CB", "CB", "LB", "CDM", "CDM", "CAM", "CAM", "ST", "ST"],
-        "4-2-3-1": ["GK", "RB", "CB", "CB", "LB", "CDM", "CDM", "CAM", "CAM", "CAM", "ST"],
-        "4-2-3-1(2)": ["GK", "RB", "CB", "CB", "LB", "CDM", "CDM", "RM", "LM", "CAM", "ST"],
-        "4-2-4": ["GK", "RB", "CB", "CB", "LB", "CM", "CM", "RW", "LW", "ST", "ST"],
-        "4-3-1-2": ["GK", "RB", "CB", "CB", "LB", "CM", "CM", "CM", "CAM", "ST", "ST"],
-        "4-3-2-1": ["GK", "RB", "CB", "CB", "LB", "CM", "CM", "CM", "CAM", "CAM", "ST"],
-        "4-3-3": ["GK", "RB", "CB", "CB", "LB", "CM", "CM", "CM", "RW", "ST", "LW"],
-        "4-3-3(2)": ["GK", "RB", "CB", "CB", "LB", "CDM", "CM", "CM", "RW", "ST", "LW"],
-        "4-3-3(3)": ["GK", "RB", "CB", "CB", "LB", "CDM", "CDM", "CM", "RW", "ST", "LW"],
-        "4-3-3(4)": ["GK", "RB", "CB", "CB", "LB", "CM", "CM", "CAM", "RW", "ST", "LW"],
-        "4-4-1-1": ["GK", "RB", "CB", "CB", "LB", "RM", "CM", "CM", "LM", "CAM", "ST"],
-        "4-4-2": ["GK", "RB", "CB", "CB", "LB", "RM", "CM", "CM", "LM", "ST", "ST"],
-        "4-4-2(2)": ["GK", "RB", "CB", "CB", "LB", "RM", "CDM", "CDM", "LM", "ST", "ST"],
-        "4-5-1": ["GK", "RB", "CB", "CB", "LB", "RM", "CM", "LM", "CAM", "CAM", "ST"],
-        "4-5-1(2)": ["GK", "RB", "CB", "CB", "LB", "RM", "CM", "CM", "CM", "LM", "ST"],
-        "5-2-1-2": ["GK", "RB", "CB", "CB", "CB", "LB", "CM", "CM", "CAM", "ST", "ST"],
-        "5-2-3": ["GK", "RB", "CB", "CB", "CB", "LB", "CM", "CM", "RW", "ST", "LW"],
-        "5-3-2": ["GK", "RB", "CB", "CB", "CB", "LB", "CDM", "CM", "CM", "ST", "ST"],
-        "5-4-1": ["GK", "RB", "CB", "CB", "CB", "LB", "RM", "CM", "CM", "LM", "ST"]
-    };
-
-    const allLeagues = ["Premier League","WSL","La Liga","Liga F","Bundesliga","GPFBL","Serie A","Ligue 1","D1 Arkema","Super Lig",
-        "MLS","NWSL","Eredivisie","EFL","Saudi Pro League","Liga Portugal","Icons","ROW","Argentina","Brazil","England",
-        "France","Germany","Italy","Netherlands","Portugal","Spain","Wildcard"
-    ];
-
     // Filter formations
-    const eligibleFormations = Object.keys(formations).filter(f => !excludeFormations.includes(f));
+    const eligibleFormations = Object.keys(FORMATIONS).filter(f => !excludeFormations.includes(f));
     if (eligibleFormations.length === 0) {
         return { error: "All formations are excluded. Adjust filters." };
     }
 
     // Filter leagues
-    const allowedLeagues = allLeagues.filter(l => !excludeLeagues.includes(l));
+    const allowedLeagues = LEAGUES.filter(l => !excludeLeagues.includes(l));
     if (allowedLeagues.length === 0) {
         return { error: "All leagues are excluded. Adjust filters." };
     }
 
     // Pick a formation
     const randomFormation = eligibleFormations[Math.floor(Math.random() * eligibleFormations.length)];
-    const positions = formations[randomFormation];
+    const positions = FORMATIONS[randomFormation];
 
     // Assign leagues
     const assignedLeagues = positions.map(position => {
