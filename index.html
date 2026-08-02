@@ -270,20 +270,32 @@
             </section>    
 
             <section class="squad-panel bg-dark text-light p-4 rounded-4 shadow mt-4">
-                <h2 id="formation-title" class="formation-name">
-                    Ready for a Challenge?
-                </h2>
 
-                <div class="row g-4">
-                    <div class="col-lg-8">
+                <div class="row g-4 align-items-start">
+
+                    <div class="col-lg-9">
+
+                        <h2 id="formation-title" class="formation-name">
+                            Ready for a Challenge?
+                        </h2>
+
+                    <!-- Pitch -->
                         <div id="formation-output" aria-live="polite">
-                            <!-- Empty pitch placeholder -->
+                            <div class="pitch"></div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+
+                    <!-- Bench -->
+                    <div class="col-lg-3">
                         <div id="bench-output">
+                            <h3>Substitutes</h3>
+
+                            <p class="text-secondary">
+                                Your substitutes will appear here.
+                            </p>
                         </div>
                     </div>
+
                 </div>
             </section>
         </div>

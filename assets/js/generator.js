@@ -278,11 +278,20 @@ document.addEventListener('DOMContentLoaded', function () {
         excludeLeagues: excludedLeagues
         });
 
-        const out = document.getElementById("formation-output");
+        const formationOutput = document.getElementById("formation-output");
+        const benchOutput = document.getElementById("bench-output");
 
         if (result.error) {
-        out.innerHTML = `<div class="alert alert-warning mb-0">${result.error}</div>`;
-        return;
+
+            document.getElementById("formation-title").textContent =
+                "Ready for a Challenge?";
+
+            formationOutput.innerHTML =
+                `<div class="alert alert-warning mb-0">${result.error}</div>`;
+
+            benchOutput.innerHTML = "";
+
+            return;
         }
 
         const { formation, assignedLeagues, allowedLeagues } = result;
@@ -292,16 +301,25 @@ document.addEventListener('DOMContentLoaded', function () {
         const pitchHTML = renderFormationPitch(formation, assignedLeagues);
 
         const benchHTML = `
-        <div class="section-label mt-3">Substitutes</div>
+        <h3>Substitutes</h3>
+
         <ul class="assignments list-unstyled">
             ${bench.map(league => `
-                <li><span class="badge bg-warning text-dark me-2">SUB</span>${league}</li>
+                <li class="bench-player">
+                    <span class="bench-badge">SUB</span>
+                    <span class="bench-league">${league}</span>
+                </li>
             `).join("")}
-        </ul>`;
+        </ul>
+        `;
 
-        out.innerHTML = `
-        <div class="formation-name">${formation}</div>
+        document.getElementById("formation-title").textContent = formation;
+
+        formationOutput.innerHTML = `
         ${pitchHTML}
+        `;
+
+        benchOutput.innerHTML = `
         ${benchHTML}
         `;
     });

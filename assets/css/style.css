@@ -151,7 +151,7 @@ header h1 {
 }
 
 /* Formation output styles */
-#formation-output .formation-name {
+#formation-title {
     font-family: 'Orbitron', sans-serif;   /* or your chosen header font */
     font-weight: 700;
     font-size: clamp(1.75rem, 3.2vw, 2.6rem);
@@ -184,14 +184,13 @@ header h1 {
 
 /* Pitch */
 #formation-output .pitch {
-  position: relative;
-  width: min(92vw, 520px);
-  aspect-ratio: 105 / 68;         /* football pitch ratio */
-  margin: 0.75rem auto 0;
-  border-radius: 12px;
-  border: 2px solid rgba(255,255,255,.12);
-  background:
-    repeating-linear-gradient(0deg, #0b5d0b 0 18px, #0a520a 18px 36px);
+    position: relative;
+    aspect-ratio: 105 / 68;         /* football pitch ratio */
+    margin: 0.75rem auto 0;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,.12);
+    background:
+        repeating-linear-gradient(0deg, #0b5d0b 0 18px, #0a520a 18px 36px);
 }
 #formation-output .pitch::after {  /* halfway line */
   content: "";
@@ -225,6 +224,54 @@ header h1 {
 #formation-output .player .league {
   font-size: clamp(.6rem, 1.6vw, .8rem);
   white-space: nowrap;    /* prevents wrap that can look off-center */
+}
+
+#bench-output {
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+    min-height: 340px;
+    padding: 1.5rem;
+    margin-top: 60px;
+}
+
+#bench-output h3 {
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: rgba(255,255,255,.7);
+    margin-bottom: 1.25rem;
+    padding-bottom: .75rem;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+#bench-output ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bench-player {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: .75rem;
+}
+
+.bench-badge {
+    min-width: 50px;
+    text-align: center;
+    background: #ffc107;
+    color: #222;
+    border-radius: 6px;
+    padding: .2rem .5rem;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.bench-league {
+    font-size: 1.15rem;
 }
 
 footer {
