@@ -14,15 +14,17 @@ main {
 
 
 header {
-    background-color: #363131;
-    padding: 1rem 2rem;
-    border-bottom: 2px solid #0d6efd; /* Bootstrap primary blue accent */
+    background: linear-gradient(180deg, #2f2f2f 0%, #242424 100%);
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(13, 110, 253, .35);
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
     color: #ffffff;
     font-weight: 700;
     letter-spacing: 1px;
@@ -33,6 +35,16 @@ header h1 {
 .hero {
     max-width: 700px;
     margin: 0 auto;
+}
+
+.hero p:first-of-type {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p:last-of-type {
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 1.5rem;
 }
 
 .generator {
