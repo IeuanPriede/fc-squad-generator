@@ -33,8 +33,9 @@ function getRandomFormation(options = {}) {
         "5-4-1": ["GK", "RB", "CB", "CB", "CB", "LB", "RM", "CM", "CM", "LM", "ST"]
     };
 
-    const allLeagues = ["Premier League","WSL","La Liga","Liga F","Bundesliga","GPFBL","Serie A","Ligue 1","D1 Arkema","Icons","ROW",
-        "Argentina", "Brazil", "England", "France", "Germany", "Italy", "Netherlands", "Portugal", "Spain", "Wildcard"
+    const allLeagues = ["Premier League","WSL","La Liga","Liga F","Bundesliga","GPFBL","Serie A","Ligue 1","D1 Arkema","Super Lig",
+        "MLS","NWSL","Eredivisie","EFL","Saudi Pro League","Liga Portugal","Icons","ROW","Argentina","Brazil","England",
+        "France","Germany","Italy","Netherlands","Portugal","Spain","Wildcard"
     ];
 
     // Filter formations
